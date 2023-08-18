@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+}
+/*inicio del header*/
+.cabecera{
+    background: #423a8d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    padding:15px  6%;
+}
+.cabecera ul{
+    display: flex ;
+    flex-direction: row ;
+    display: flex;
+    gap: 20px;
+}
+.cabecera li {
+    list-style: none;
+}
+.cabecera h2{
+    color: white ;
+}
+a{ 
+    text-decoration: none;
+    color: aliceblue;
+}
+.cabecera li:hover{
+    text-decoration: 3px underline ;
+    text-decoration-color: aqua; 
+}
+
+
+/*inicio del contenido*/
+.presentation{
+    display: flex;
+    justify-content: center;
+    background: #7fffd4;
+    padding: 30px;
+    align-items: center;
+}
+.txt-presentation{
+    color: #423a8d;
+}
+.circle{
+    border: 1px solid teal;
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+}
+.fa-user-secret{
+    font-size: 10px;
+    color: bisque;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*inicio del footer*/
+.content-footer{
+    background: #423a8d;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+.box-footer p{
+    font-style: italic;
+}
+.sub-box-footer{
+
+}
+.sub-box-footer h1{
+    font-size:  20px;
+    text-align: center;
+}
+.enlaces{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;    
+    margin: 10px;
+    height: 20px;
+}
+.enlaces i{ 
+    margin: 5px;
+}
+.fa-brands , .fa-solid{
+    font-size: 30px;
+    transition: .5s;
+}
+.fa-envelope:hover, .fa-linkedin:hover, .fa-github:hover{
+    color: aqua;
+    transition: .5s;
+    font-size: 35px;
+}
