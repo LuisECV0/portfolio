@@ -1,13 +1,16 @@
 *{
     margin: 0;
+    color: #ddd;
 }
-/*inicio del header*/
+/*?inicio del header*/
 .cabecera{
-    background: #423a8d;
+    background: #252B48;
     display: flex;
     justify-content: space-between;
     align-items: center ;
-    padding:15px  6%;
+    padding:15px 50px;
+    width: auto;
+
 }
 .cabecera ul{
     display: flex ;
@@ -27,59 +30,78 @@ a{
 }
 .cabecera li:hover{
     text-decoration: 3px underline ;
-    text-decoration-color: aqua; 
+    text-decoration-color: #F7E987; 
 }
-
-
-/*inicio del contenido*/
+/*?inicio del contenido*/
 .presentation{
     display: flex;
     justify-content: center;
-    background: #7fffd4;
-    padding: 30px;
+    background: #445069;
+    padding:100px ;
     align-items: center;
+    border: 1px solid greenyellow;
+    width: auto;
 }
 .txt-presentation{
-    color: #423a8d;
+    color: white;
+    padding: 10px;
 }
 .circle{
+    margin: 0;
     border: 1px solid teal;
     border-radius: 100%;
-    height: 100px;
-    width: 100px;
+    height: 400px;
+    width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     background: black;
 }
 .fa-user-secret{
-    font-size: 10px;
-    color: bisque;
+    font-size: 300px;
+    color: bisque; 
+
 }
+/*?contenido portfolio*/
+.projects-container {
+    padding: 80px 200px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: #445069;
+}
+.project {
+    flex: 1;
+    min-width: max-content;
+    padding: 10px 0;
+    background-color: #252B48; /* Color de fondo de cada proyecto */
+    border: 1px solid #ddd; /* Borde alrededor de cada proyecto */
+    border-radius: 5px; /* Borde redondeado */
+    text-align: center;
+    position: relative; /* Necesario para posicionar la capa transparente */
+    overflow: hidden; /* Oculta lo que se sale de los límites del proyecto */
+}
+.project img {
+    width: 200px;
+    height: auto;
+    transition: .4s;
+    opacity: .7;
+    
+}
+.project img:hover{
+    opacity: 1;
+    transition: .4s;
+    width: 220px;
+    
+}
+/*?INICIO DE CONTANTO*/
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*inicio del footer*/
+/*?inicio del footer*/
 .content-footer{
-    background: #423a8d;
+    background: #252B48;
     color: white;
     display: flex;
     justify-content: center;
@@ -87,9 +109,6 @@ a{
 }
 .box-footer p{
     font-style: italic;
-}
-.sub-box-footer{
-
 }
 .sub-box-footer h1{
     font-size:  20px;
@@ -106,7 +125,7 @@ a{
 .enlaces i{ 
     margin: 5px;
 }
-.fa-brands , .fa-solid{
+.fa-envelope , .fa-linkedin, .fa-github{
     font-size: 30px;
     transition: .5s;
 }
