@@ -74,26 +74,28 @@ a{
     flex: 1;
     min-width: max-content;
     padding: 10px 0;
-    background-color: #252B48; /* Color de fondo de cada proyecto */
-    border: 1px solid #ddd; /* Borde alrededor de cada proyecto */
-    border-radius: 5px; /* Borde redondeado */
+    background-color: #252B48; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
     text-align: center;
-    position: relative; /* Necesario para posicionar la capa transparente */
-    overflow: hidden; /* Oculta lo que se sale de los límites del proyecto */
+    position: relative; /* Oculta lo que se sale de los límites del proyecto */
+    transition: transform 0.5s; /* Agregar transición para la transformación */
 }
 .project img {
     width: 200px;
     height: auto;
-    transition: .4s;
-    opacity: .7;
-    
+    opacity: 0.5;
+    transform: scale(1);
+    transition: 0.5s;
 }
-.project img:hover{
+.project:hover {
+    transform: scale(1.05); 
+}
+.project img:hover {
     opacity: 1;
-    transition: .4s;
-    width: 220px;
-    
+    transition: 0.5s;
 }
+
 /*?INICIO DE CONTANTO*/
 
 
