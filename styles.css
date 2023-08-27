@@ -3,7 +3,7 @@
     color: #ddd;
 }
 @media (max-width:1400px){
-        /* Estilos del header */
+/*!Estilos del header */
 .cabecera {
     background: #252B48;
     display: flex;
@@ -29,7 +29,7 @@ a {
     text-decoration: underline;
     text-decoration-color: #F7E987;
 }     
-/* Estilos de la presentación */
+/*!Estilos de la presentación */
 .presentation {
     display: flex;
     justify-content: center;
@@ -37,7 +37,7 @@ a {
     padding: 100px;
     align-items: center;
 }    
-    .txt-presentation {
+.txt-presentation {
     color: white;
     padding: 10px;
 }   
@@ -54,9 +54,8 @@ a {
 .fa-user-secret {
     font-size: 300px;
     color: bisque;
-}
-      
-/* Estilos del portafolio */
+}     
+/*!Estilos del portafolio */
 .projects-container {
     padding: 80px 200px;
     display: flex;
@@ -88,7 +87,7 @@ a {
 .project img:hover {
     opacity: 1;
 }     
-/* Estilos del footer */
+/*!Estilos del footer */
 .content-footer {
     background: #252B48;
     color: white;
@@ -96,7 +95,7 @@ a {
     justify-content: center;
     padding: 30px;
 }     
-    .box-footer p {
+.box-footer p {
     font-style: italic;
 }  
 .sub-box-footer h1 {
@@ -114,7 +113,7 @@ a {
     margin: 5px;
     font-size: 30px;
     transition: 0.5s;
-    } 
+} 
 .enlaces a:hover i {
     color: aqua;
     font-size: 35px;
@@ -132,13 +131,11 @@ a {
 }
 .txt-presentation {
     font-size: 18px;
-}
-  
+} 
 .circle {
     height: 200px;
     width: 200px;
 }
-  
 .fa-user-secret {
     font-size: 140px;
 } 
@@ -155,4 +152,47 @@ a {
 .enlaces i {
     font-size: 20px;
 }
+}
+@media (max-width: 480px) {
+/* Header */
+.cabecera {
+    padding: 5px 10px;
+}
+.cabecera ul {
+    gap: 5px;
+    }
+.cabecera h2 {
+    font-size: 18px;
+}
+/* Presentación */
+.presentation {
+    padding: 20px;
+}
+.txt-presentation {
+    font-size: 16px;
+} 
+.circle {
+    height: 150px;
+    width: 150px;
+} 
+.fa-user-secret {
+    font-size: 100px;
+} 
+/* Portafolio */
+.projects-container {
+    padding: 10px;
+}
+.project img {
+    width: 100%;
+} 
+/* Footer */
+.content-footer {
+    padding: 10px;
+}  
+.sub-box-footer h1 {
+    font-size: 12px;
+}  
+.enlaces i {
+    font-size: 16px;
+}  
 }
