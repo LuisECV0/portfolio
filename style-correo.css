@@ -1,19 +1,17 @@
+.box{
+    display: flex;
+    justify-content: center;
+}
 .slider-container {
     position: relative;
-    width: 100%;
+    width: 320px;
     overflow: hidden;
+    text-align: center;
 }
-
-.slider {
-    display: flex;
-    transition: transform 0.5s ease;
+#slider-image {
+    max-width: 500px;
+    height: 300px;
 }
-
-.slider img {
-    width: 100%;
-    height: auto;
-}
-
 .prev-button,
 .next-button {
     position: absolute;
@@ -24,12 +22,20 @@
     color: white;
     border: none;
     cursor: pointer;
+    font-size: 20px;
+    transition: .4s;
 }
-
+.prev-button:hover, .next-button:hover{
+    transition: .4s;
+    background-color:  rgba(58, 57, 57, 0.5);
+}
 .prev-button {
     left: 0;
 }
-
 .next-button {
-    right: 0;
+    right:0;
 }
+#slider-image {
+    width: 250px; 
+    height: auto;
+}   

@@ -33,7 +33,10 @@ a {
 .presentation {
     display: flex;
     justify-content: center;
-    background: #445069;
+    background-image: url("./imgs/space.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     padding: 100px;
     align-items: center;
 }    
