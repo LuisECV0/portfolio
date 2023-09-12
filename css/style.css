@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  color: #ddd;
+}
+
+.cabecera {
+  background: #252B48;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+}
+.cabecera ul {
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+}
+.cabecera ul li {
+  list-style: none;
+  transition: 0.5s;
+  border-radius: 10px;
+  padding: 3% 0;
+  width: auto;
+}
+.cabecera ul li a {
+  text-decoration: none;
+  color: aliceblue;
+}
+.cabecera ul li:hover {
+  background-color: #4f5d7c;
+  transition: 0.5s;
+}
+.cabecera h2 {
+  color: white;
+  font-size: 30px;
+}
+
+.presentation {
+  display: flex;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 100px;
+  align-items: center;
+  background-image: url(./background.jpg);
+}
+.presentation .txt-presentation {
+  color: white;
+  padding: 10px;
+}
+.presentation .circle {
+  border: 1px solid teal;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./dev.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 400px;
+  width: 400px;
+}
+.presentation h1 {
+  font-size: 70px;
+}
+.presentation p {
+  font-size: 30px;
+}
+
+.projects-container {
+  padding: 80px 200px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background: #445069;
+}
+
+.box-project {
+  flex: 1;
+  width: auto;
+  padding: auto;
+}
+.box-project p {
+  text-align: center;
+  padding: 10px;
+}
+
+.project {
+  flex: 1;
+  padding: 10px 0;
+  background-color: #252B48;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+  flex-wrap: wrap;
+  transition: transform 0.5s;
+}
+.project img {
+  width: 400px;
+  height: auto;
+  transform: scale(1);
+  transition: 0.5s;
+}
+.project:hover {
+  transform: scale(1.05);
+}
+
+.content-footer {
+  background: #252B48;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+.content-footer .box-footer p {
+  font-style: italic;
+}
+.content-footer .sub-box-footer h1 {
+  font-size: 20px;
+  text-align: center;
+}
+.content-footer .sub-box-footer .enlaces {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+  height: 20px;
+}
+.content-footer .sub-box-footer .enlaces i {
+  margin: 5px;
+  font-size: 30px;
+  transition: 0.5s;
+}
+a:hover .content-footer .sub-box-footer .enlaces i {
+  color: aqua;
+  font-size: 35px;
+}
+
+@media (max-width: 768px) {
+  .cabecera {
+    padding: 10px 10px;
+  }
+  .cabecera h2 {
+    font-size: 20px;
+  }
+  .presentation {
+    padding: 30px;
+  }
+  .presentation .txt-presentation {
+    font-size: 18px;
+  }
+  .presentation .circle {
+    height: 200px;
+    width: 200px;
+  }
+  .presentation .circle .fa-user-secret {
+    font-size: 140px;
+  }
+  .presentation .project {
+    flex: 1;
+    max-width: 70%;
+    margin: 15px auto;
+  }
+  .presentation .project img {
+    width: 100%;
+  }
+  .presentation .sub-box-footer h1 {
+    font-size: 14px;
+  }
+  .presentation .enlaces i {
+    font-size: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .cabecera {
+    padding: 10px 20px;
+  }
+  .cabecera ul {
+    gap: 10px;
+    font-size: 15px;
+  }
+  .cabecera ul h2 {
+    font-size: 18px;
+  }
+  .cabecera ul .presentation {
+    padding: 20px;
+  }
+  .cabecera ul .presentation .txt-presentation {
+    font-size: 16px;
+  }
+  .cabecera ul .presentation .circle {
+    height: 150px;
+    width: 150px;
+  }
+  .cabecera ul .presentation .circle .fa-user-secret {
+    font-size: 100px;
+  }
+  .cabecera ul .presentation .projects-container {
+    padding: 10px;
+    flex-direction: column;
+  }
+  .cabecera ul .presentation .projects-container .project img {
+    width: 100%;
+  }
+  .cabecera ul .presentation .projects-container .content-footer {
+    padding: 10px;
+  }
+  .cabecera ul .presentation .projects-container .content-footer .sub-box-footer h1 {
+    font-size: 12px;
+  }
+  .cabecera ul .presentation .projects-container .content-footer .enlaces i {
+    font-size: 16px;
+  }
+  .cabecera ul .presentation .projects-container .content-footer .box-project p {
+    font-size: 10px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

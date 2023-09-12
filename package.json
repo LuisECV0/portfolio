@@ -1,0 +1,14 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "¡Hola! 👋 Soy LuisECV, y este es mi portfolio personal. Aquí encontrarás una muestra de mis proyectos, habilidades y más. Este portfolio fue creado con la intención de presentar mi experiencia y contribuciones de una manera atractiva.",
+  "main": "javascript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.66.1"
+  }
+}

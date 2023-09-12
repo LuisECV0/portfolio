@@ -1,0 +1,271 @@
+$color-fondo: #252B48;
+$color-texto: #ddd;
+$color-destacado: teal;
+
+* {
+  margin: 0;
+  color: $color-texto;
+}
+
+
+  .cabecera {
+    background: $color-fondo;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    
+    ul {
+      display: flex;
+      gap: 20px;
+      font-size: 20px;
+      li {
+        list-style: none;
+        transition: .5s;
+        border-radius: 10px;
+        padding: 3% 0; 
+        width: auto;
+        a {
+          text-decoration: none;
+          color: aliceblue;
+        }
+      }
+      li:hover{
+        background-color: #4f5d7c;
+        transition: .5s;
+      }
+    }
+    
+    h2 {
+      color: white;
+      font-size: 30px;
+    }
+  }
+  
+  // Estilos de la presentación
+  .presentation {
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 100px;
+    align-items: center;
+    background-image: url(./background.jpg);
+    
+    .txt-presentation {
+      color: white;
+      padding: 10px;
+    }
+    
+    .circle {
+      border: 1px solid $color-destacado;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url("./dev.jpeg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 400px;
+      width: 400px ;
+       
+      
+    }
+    
+    h1 {
+      font-size: 70px;
+    }
+    
+    p {
+      font-size: 30px;
+    }
+  }
+  
+  // Estilos del portafolio
+  .projects-container {
+    padding: 80px 200px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: #445069;
+  }
+  
+  .box-project {
+    flex: 1;
+    width: auto;
+    padding: auto;
+    
+    p {
+      text-align: center;
+      padding: 10px;
+    }
+  }
+  
+  .project {
+    flex: 1;
+    padding: 10px 0;
+    background-color: #252B48;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    flex-wrap: wrap;
+    transition: transform 0.5s;
+    
+    img {
+      width: 400px;
+      height: auto;
+      transform: scale(1);
+      transition: 0.5s;
+    }
+    
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  
+  // Estilos del footer
+  .content-footer {
+    background: $color-fondo;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    
+    .box-footer {
+      p {
+        font-style: italic;
+      }
+    }
+    
+    .sub-box-footer {
+      h1 {
+        font-size: 20px;
+        text-align: center;
+      }
+      
+      .enlaces {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 10px;
+        height: 20px;
+        
+        i {
+          margin: 5px;
+          font-size: 30px;
+          transition: 0.5s;
+          
+          a:hover & {
+            color: aqua;
+            font-size: 35px;
+          }
+        }
+      }
+    }
+  }
+
+
+@media (max-width: 768px) {
+  .cabecera {
+    padding: 10px 10px;
+    
+    h2 {
+      font-size: 20px;
+    }
+  }
+  
+  .presentation {
+    padding: 30px;
+    
+    .txt-presentation {
+      font-size: 18px;
+    }
+    
+    .circle {
+      height: 200px;
+      width: 200px;
+      
+      .fa-user-secret {
+        font-size: 140px;
+      }
+    }
+    
+    .project {
+      flex: 1;
+      max-width: 70%;
+      margin: 15px auto;
+      
+      img {
+        width: 100%;
+      }
+    }
+    
+    .sub-box-footer h1 {
+      font-size: 14px;
+    }
+    
+    .enlaces i {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .cabecera {
+    padding: 10px 20px;
+    
+    ul {
+      gap: 10px;
+      font-size: 15px;
+      
+      h2 {
+        font-size: 18px;
+      }
+      
+      .presentation {
+        padding: 20px;
+        
+        .txt-presentation {
+          font-size: 16px;
+        }
+        
+        .circle {
+          height: 150px;
+          width: 150px;
+          
+          .fa-user-secret {
+            font-size: 100px;
+          }
+        }
+        
+        .projects-container {
+          padding: 10px;
+          flex-direction: column;
+          
+          .project img {
+            width: 100%;
+          }
+          
+          .content-footer {
+            padding: 10px;
+            
+            .sub-box-footer h1 {
+              font-size: 12px;
+            }
+            
+            .enlaces i {
+              font-size: 16px;
+            }
+            
+            .box-project p {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
