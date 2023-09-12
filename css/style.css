@@ -112,20 +112,32 @@
 }
 
 .box-skills {
-  border: 1px solid rgb(0, 183, 255);
   padding: 0 15%;
   font-size: 20px;
   background-color: #445069;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
 }
 .box-skills .tittle-skills {
   width: 90px;
-  border: 1px solid red;
+  text-align: center;
+  margin: 40px auto;
+}
+.box-skills .tittle-skills h1 {
+  font-size: 40px;
 }
 .box-skills .count-skill {
-  border: 1px solid rgb(0, 255, 34);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 .box-skills .count-skill img {
   width: 100px;
+  height: auto;
   cursor: pointer;
 }
 
