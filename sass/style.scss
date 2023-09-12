@@ -1,7 +1,6 @@
 $color-fondo: #252B48;
 $color-texto: #ddd;
 $color-destacado: teal;
-
 * {
   margin: 0;
   color: $color-texto;
@@ -69,9 +68,7 @@ $color-destacado: teal;
       background-repeat: no-repeat;
       background-position: center;
       height: 400px;
-      width: 400px ;
-       
-      
+      width: 400px ;  
     }
     
     h1 {
@@ -83,15 +80,14 @@ $color-destacado: teal;
     }
   }
   
-  // Estilos del portafolio
+  //* Estilos del portafolio
   .projects-container {
-    padding: 80px 200px;
+    padding: 80px 15%;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     background: #445069;
   }
-  
   .box-project {
     flex: 1;
     width: auto;
@@ -100,6 +96,9 @@ $color-destacado: teal;
     p {
       text-align: center;
       padding: 10px;
+      border: 1.5px solid rgb(179, 179, 179);
+      background-color: #242e44;
+      font-weight: 800;
     }
   }
   
@@ -126,6 +125,28 @@ $color-destacado: teal;
     }
   }
   
+  .box-skills {
+    border: 1px solid rgb(0, 183, 255);
+    padding: 0 15%;
+    font-size: 20px;
+    background-color: #445069;
+    
+    .tittle-skills {
+        width: 90px;
+        border: 1px solid red;
+        
+    }
+    .count-skill {
+        border: 1px solid rgb(0, 255, 34);
+       
+
+        img {
+        width: 100px;
+        cursor: pointer;
+        }
+        
+    }
+  }
   // Estilos del footer
   .content-footer {
     background: $color-fondo;
@@ -192,7 +213,6 @@ $color-destacado: teal;
         font-size: 140px;
       }
     }
-    
     .project {
       flex: 1;
       max-width: 70%;
@@ -202,6 +222,7 @@ $color-destacado: teal;
         width: 100%;
       }
     }
+
     
     .sub-box-footer h1 {
       font-size: 14px;

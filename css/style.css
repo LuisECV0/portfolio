@@ -70,7 +70,7 @@
 }
 
 .projects-container {
-  padding: 80px 200px;
+  padding: 80px 15%;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -85,6 +85,9 @@
 .box-project p {
   text-align: center;
   padding: 10px;
+  border: 1.5px solid rgb(179, 179, 179);
+  background-color: #242e44;
+  font-weight: 800;
 }
 
 .project {
@@ -106,6 +109,24 @@
 }
 .project:hover {
   transform: scale(1.05);
+}
+
+.box-skills {
+  border: 1px solid rgb(0, 183, 255);
+  padding: 0 15%;
+  font-size: 20px;
+  background-color: #445069;
+}
+.box-skills .tittle-skills {
+  width: 90px;
+  border: 1px solid red;
+}
+.box-skills .count-skill {
+  border: 1px solid rgb(0, 255, 34);
+}
+.box-skills .count-skill img {
+  width: 100px;
+  cursor: pointer;
 }
 
 .content-footer {
