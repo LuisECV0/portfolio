@@ -101,8 +101,8 @@ $color-destacado: teal;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      height: 400px;
-      width: 400px ;  
+      height: 40vh;
+      width: 40vh ;  
     }
   }
   //* Estilos del portafolio
@@ -388,6 +388,7 @@ button:active {
 @media (max-width: 768px) {
   .cabecera {
     padding: 10px 10px;
+    width: auto;
     
     h2 {
       font-size: 20px;
@@ -434,7 +435,7 @@ button:active {
 
   .cabecera {
     padding: 10px 20px;
-    width: 100vh;
+    width: auto;
     margin: 0;
     
     ul {
@@ -448,8 +449,7 @@ button:active {
   }
   .presentation {
     height: 90vh;
-    width: 100vh;
-    border: 1px solid red;
+    width: auto;
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -461,8 +461,12 @@ button:active {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      text-align: center;   
-      border: 1px solid greenyellow;
+      text-align: center;  
+      align-items: center; 
+      border: 1px solid red;
+      a{
+        width: 30vh;
+      }
     }
     
     .circle {
@@ -473,17 +477,36 @@ button:active {
     }
   }
   .projects-container {
-    padding-top: 20px;
+    padding: 50px 10px;
     display: flex;
     gap: 10px;
-    width: 100%;
-
+    background: #445069;
+    width: auto;
+    
+    
     .margin-project {
       display: flex;
-      flex-wrap: wrap;
+      width: 100%;
+      padding: 0;
+      align-items: center;
       justify-content: center;
       gap: 20px;
-      margin:10%;
+      margin: 0;
+
+      .number-project {
+        width: 80%;
+        padding: 0;
+        margin: 0;
+        height: auto;
+        .box-project {
+          .image-container {
+            img{
+              width: 100%;
+            }
+          }
+        }
+
+      }
     }
   }
   
