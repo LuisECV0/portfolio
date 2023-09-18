@@ -22,13 +22,15 @@
 </header>
 
 <div class="presentation">
-    <div class="txt-presentation">
-        <h1>I`m LuisCV</h1>
-        <p>I`m from developer frontend.</p>
-        <a href="./DOC/Luis-Castañeda-Vega.pdf" download="Luis-Castañeda-Vega.pdf">Descargar CV</a>
-    </div>
-    <div class="circle">
-    </div>
+    
+        <div class="txt-presentation">
+            <h1>I`m LuisCV</h1>
+            <p>I`m from developer frontend.</p>
+            <a href="./DOC/Luis-Castañeda-Vega.pdf" download="Luis-Castañeda-Vega.pdf">Descargar CV</a>
+        </div>
+        <div class="circle">
+        </div>
+    
 </div>
 <!--?IDEA A AÑADIR: ICONO DE VER EN CUADRO Y UN SLIDER-->
 <div class="projects-container">
@@ -181,6 +183,10 @@
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" required>
         </div>
+        <div class="box-name">
+            <label for="nombre">Correo:</label>
+            <input type="email" id="email" required>
+        </div>
         <div class="box-msj">
             <label for="description">Asunto:</label>
             <textarea name="nose" id=""  rows="3"></textarea>
@@ -190,6 +196,21 @@
 </div>
 
 <footer>
+    <div id="chat-container">
+
+        <div id="chat-icon" onclick="toggleChat()">
+            <img src="./imgs/chatbot.png" width="80px" alt="Icono de chat">
+        </div>
+       
+        <div id="chatbot" style="display: none;">
+           
+            <div id="chat-messages"></div>
+            <div class="mensaje">
+                <input type="text" id="user-input" placeholder="Escribe tu pregunta"> 
+                <button onclick="sendMessage()">Enviar</button>
+            </div>
+        </div>
+    </div>
     <div class="content-footer">
         <div class="box-footer">
             <div class="sub-box-footer">
@@ -207,6 +228,6 @@
     </div>
 </footer>
 
-
+<script src="javascript.js"></script>
 </body>
 </html>

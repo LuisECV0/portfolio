@@ -44,6 +44,7 @@ $color-destacado: teal;
   .presentation {
     height: 90vh;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -58,6 +59,7 @@ $color-destacado: teal;
       flex-direction: column;
       justify-content: center;
       text-align: center;
+      
 
       h1 {
         font-size: 70px;
@@ -77,9 +79,14 @@ $color-destacado: teal;
         background-color: #252B48;
         border-radius: 10px;
       }
-      a:hover{
+      a:active {
         border: 1px solid black;
         scale: .9;
+        transition: .5s;       
+      }
+      a:hover{
+        border: 1px solid black;
+        
         transition: .5s;
       }
     }
@@ -97,10 +104,7 @@ $color-destacado: teal;
       height: 400px;
       width: 400px ;  
     }
-    
-
   }
-  
   //* Estilos del portafolio
   .projects-container {
     padding-top: 80px;
@@ -214,10 +218,6 @@ $color-destacado: teal;
     }
   }
   
-  
-  
-  
-  
 .contact {
   text-align: center;
   background: #252B48;
@@ -246,9 +246,9 @@ $color-destacado: teal;
       gap: 10px;
       label {
         font-size: 18px;
-        text-align: left; /* Alineado a la izquierda */
+        text-align: left;
       }
-      input[type="text"], textarea {
+      input, textarea {
         padding: 7px 10px;
         font-size: 16px;
         color: black;
@@ -256,6 +256,8 @@ $color-destacado: teal;
         border: 2px solid #000000;
         border-radius: 10px;
         overflow: hidden;
+        resize: vertical;
+        height: auto;
       }
     }
     a {
@@ -269,8 +271,8 @@ $color-destacado: teal;
       border: 1px solid white;
       transition: background-color 0.3s ease;
       transition: 0.5s;
-      align-self: center; /* Centro verticalmente */
-      width: fit-content; /* Ajustar al contenido */
+      align-self: center; 
+      width: fit-content;
       &:hover {
         background-color: #6b737a;
         border: 1px solid black;
@@ -323,7 +325,66 @@ $color-destacado: teal;
     }
   }
 
+  
+#chat-container {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #959dba;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+  border-radius: 20px 20px 0 0;
+  border: 2px solid rgb(255, 255, 255);
+}
 
+#chat-icon {
+  background-color: #405791; 
+  border-bottom: 2px solid white;
+  text-align: center;
+  cursor: pointer;
+  padding: 10px;
+  transition: .5s;
+  border-radius: 20px 20px 0 0;
+}
+
+#chatbot {
+  padding: 10px;
+  background-image: linear-gradient(rgb(70, 70, 142) 30%, rgb(122, 122, 144) 100%);
+  background-size: 30% 100%; 
+}
+
+#chat-messages {
+  height: 200px;
+  overflow-y: auto;
+  border-bottom: 1px solid #ccc;  
+}
+
+#user-input {
+  
+  width: 70%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  color: #000000;
+}
+.user-message{
+  border: 1px solid red;
+  background-color: #b6c8f0;
+  color: #000000;
+  padding: 5px 5px;
+  border-radius: 10px 10px 10px 0;
+}
+button {
+  padding: 5px 10px;
+  background-color: #191d35;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: .5s;
+  border-radius: 5px;
+  scale: 1;
+}
+button:active {
+  scale: 0.5;
+}
 @media (max-width: 768px) {
   .cabecera {
     padding: 10px 10px;
@@ -358,7 +419,6 @@ $color-destacado: teal;
       }
     }
 
-    
     .sub-box-footer h1 {
       font-size: 14px;
     }
@@ -370,8 +430,12 @@ $color-destacado: teal;
 }
 
 @media (max-width: 480px) {
+
+
   .cabecera {
     padding: 10px 20px;
+    width: 100vh;
+    margin: 0;
     
     ul {
       gap: 10px;
@@ -380,48 +444,62 @@ $color-destacado: teal;
       h2 {
         font-size: 18px;
       }
+    } 
+  }
+  .presentation {
+    height: 90vh;
+    width: 100vh;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 10px;
+    
+    .txt-presentation {
+      color: white;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;   
+      border: 1px solid greenyellow;
+    }
+    
+    .circle {
+      border: 1px solid $color-destacado;
+      width: 40vh;
+      height: 40vh;
       
-      .presentation {
-        padding: 20px;
-        
-        .txt-presentation {
-          font-size: 16px;
-        }
-        
-        .circle {
-          height: 150px;
-          width: 150px;
-          
-          .fa-user-secret {
-            font-size: 100px;
-          }
-        }
-        
-        .projects-container {
-          padding: 10px;
-          flex-direction: column;
-          
-          .project img {
-            width: 100%;
-          }
-          
-          .content-footer {
-            padding: 10px;
-            
-            .sub-box-footer h1 {
-              font-size: 12px;
-            }
-            
-            .enlaces i {
-              font-size: 16px;
-            }
-            
-            .box-project p {
-              font-size: 10px;
-            }
-          }
-        }
-      }
+    }
+  }
+  .projects-container {
+    padding-top: 20px;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+
+    .margin-project {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin:10%;
+    }
+  }
+  
+  .content-footer {
+    padding: 10px;
+    
+    .sub-box-footer h1 {
+      font-size: 12px;
+    }
+    
+    .enlaces i {
+      font-size: 16px;
+    }
+    
+    .box-project p {
+      font-size: 10px;
     }
   }
 }
