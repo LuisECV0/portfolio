@@ -13,10 +13,10 @@
     <div class="cabecera">
         <h2>Logo</h2>
         <ul>
-            <li><a href="#portafolio">Portafolio</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-            <li><a href="#miperfil">Mi perfil</a></li>
-            <li><a href="#miproyecto">Proyectos</a></li>
+            <li><a href="#portafolio">Portfolio</a></li>
+            <li><a href="#contacto">Contact</a></li>
+            <li><a href="#miperfil">My profile</a></li>
+            <li><a href="#miproyecto">Projects</a></li>
         </ul>
     </div>
 </header>
@@ -25,8 +25,8 @@
     
         <div class="txt-presentation">
             <h1>I`m LuisCV</h1>
-            <p>I`m from developer frontend.</p>
-            <a href="./DOC/Luis-Castañeda-Vega.pdf" download="Luis-Castañeda-Vega.pdf">Descargar CV</a>
+            <p>I`m developer frontend.</p>
+            <a href="./DOC/Luis-Castañeda-Vega.pdf" download="Luis-Castañeda-Vega.pdf">Download CV</a>
         </div>
         <div class="circle">
         </div>
@@ -39,7 +39,7 @@
         <div class="number-project">
             
             <div class="box-project">
-                <p>Proyecto - Piedra, papel o tijera</p>
+                <p>Project - Rock, Paper, Scissors</p>
                 <div class="image-container">
                     <img src="./imgs/p1.png" alt="generando proyecto">
                     <div class="overlay">
@@ -48,7 +48,7 @@
                             <a href="https://luisecv0.github.io/Piedra-papel-tijera/"><i class="fa-solid fa-up-right-from-square"></i></a>
                         </div>           
                         <div class="bottom-overlay">
-                        Descripción de la imagen
+                            Image description
                         </div>   
                     </div>
                 </div>
@@ -56,7 +56,7 @@
         </div>
         <div class="number-project">
             <div class="box-project">
-                <p>Proyecto - Calculadora SASS</p>
+                <p>Project - SASS Calculator</p>
                 <div class="image-container">
                     <img src="./imgs/cal-sass.png" alt="generando proyecto">
                     <div class="overlay">
@@ -65,7 +65,7 @@
                             <a href="https://luisecv0.github.io/calculadoraSAS/"><i class="fa-solid fa-up-right-from-square"></i></a>
                         </div>           
                         <div class="bottom-overlay">
-                        Descripción de la imagen
+                            Image description
                         </div>   
                     </div>
                 </div>
@@ -73,7 +73,7 @@
         </div>
         <div class="number-project">
             <div class="box-project">
-                <p>Proyecto - Clon FB</p>
+                <p>Project - FB Clone</p>
                 <div class="image-container">
                     <img src="./imgs/clonFB.png" alt="generando proyecto">
                     <div class="overlay">
@@ -82,7 +82,7 @@
                             <a href="https://luisecv0.github.io/clonFB/"><i class="fa-solid fa-up-right-from-square"></i></a>
                         </div>           
                         <div class="bottom-overlay">
-                        Descripción de la imagen
+                            Image description
                         </div>   
                     </div>
                 </div>
@@ -90,7 +90,7 @@
         </div>
         <div class="number-project">
             <div class="box-project">
-                <p>Proyecto - Ecommerce</p>
+                <p>Project - Ecommerce</p>
                 <div class="image-container">
                     <img src="./imgs/Ecommerce.png" alt="generando proyecto">
                     <div class="overlay">
@@ -99,7 +99,7 @@
                             <a href="https://luisecv0.github.io/red/"><i class="fa-solid fa-up-right-from-square"></i></a>
                         </div>           
                         <div class="bottom-overlay">
-                        Descripción de la imagen
+                            Image description
                         </div>   
                     </div>
                 </div>
@@ -107,7 +107,7 @@
         </div>
         <div class="number-project">
             <div class="box-project">
-                <p>Proyecto - Login</p>
+                <p>Project - Login</p>
                 <div class="image-container">
                     <img src="./imgs/p4.png" alt="generando proyecto">
                     <div class="overlay">
@@ -116,7 +116,7 @@
                             <a href="https://luisecv0.github.io/red/login.html"><i class="fa-solid fa-up-right-from-square"></i></a>
                         </div>           
                         <div class="bottom-overlay">
-                        Descripción de la imagen
+                            Image description
                         </div>   
                     </div>
                 </div>
@@ -124,7 +124,7 @@
         </div>
         <div class="number-project">
             <div class="box-project">
-                <p>Proyecto - Calculadora</p>
+                <p>Project - Calculator</p>
                 <div class="image-container">
                     <img src="./imgs/p5.png" alt="generando proyecto">
                     <div class="overlay">
@@ -133,7 +133,7 @@
                             <a href="https://luisecv0.github.io/Calculadora/"><i class="fa-solid fa-up-right-from-square"></i></a>
                         </div>           
                         <div class="bottom-overlay">
-                        Descripción de la imagen
+                            Image description
                         </div>   
                     </div>
                 </div>
@@ -150,7 +150,7 @@
                             <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
                         </div>           
                         <div class="bottom-overlay">
-                        Descripción de la imagen
+                            Image description
                         </div>   
                     </div>
                 </div>
@@ -176,45 +176,37 @@
         <img src="./imgs/sass.png" alt="skill-sass">
     </div>
 </div>
+
 <div class="contact">
-    <h1>Contacto:</h1>
-    <form action="" method="post" class="form">
+    <h1>Contact:</h1>
+    <form action="http://127.0.0.1:3000/enviar-correo" method="POST" class="form">
+
         <div class="box-name">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" required>
+            <label for="nombre">Name:</label>
+            <input type="text" name="nombres" id="nombre" required>
         </div>
         <div class="box-name">
-            <label for="nombre">Correo:</label>
-            <input type="email" id="email" required>
+            <label for="correo">Mail:</label> <!-- Cambiado de destinatario a correo -->
+            <input type="email" name="correo" id="correo" required> <!-- Cambiado de destinatario a correo -->
         </div>
+        <!-- El campo de "telefono" se elimina ya que no está en el formulario -->
         <div class="box-msj">
-            <label for="description">Asunto:</label>
-            <textarea name="nose" id=""  rows="3"></textarea>
+            <label for="description">Issue:</label> <!-- Corregido "Isue" a "Issue" -->
+            <textarea name="mensaje" id="description" rows="3" required></textarea> <!-- Cambiado de "nose" a "mensaje" -->
         </div>
-        <a href="">Enviar</a>
+        <button type="submit">Submit</button>
     </form>
 </div>
 
-<footer>
-    <div id="chat-container">
 
-        <div id="chat-icon" onclick="toggleChat()">
-            <img src="./imgs/chatbot.png" width="80px" alt="Icono de chat">
-        </div>
-       
-        <div id="chatbot" style="display: none;">
-           
-            <div id="chat-messages"></div>
-            <div class="mensaje">
-                <input type="text" id="user-input" placeholder="Escribe tu pregunta"> 
-                <button onclick="sendMessage()">Enviar</button>
-            </div>
-        </div>
-    </div>
+
+
+<footer>
+
     <div class="content-footer">
         <div class="box-footer">
             <div class="sub-box-footer">
-                <h1>Enlaces para contacto</h1>
+                <h1>Links for contact</h1>
                 <div class="enlaces">
                     <a href="https://github.com/LuisECV0"><i class="fa-brands fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/luis-casta%C3%B1eda-vega-9793bb258/"><i class="fa-brands fa-linkedin"></i></a>
@@ -222,12 +214,28 @@
                 </div>
             </div>
 
-            <p>&copy; 2020 - Todos los derechos reservados | Diseñado por LuisCV</p>        
+            <p>&copy; 2020 - All rights reserved | Designed by LuisCV</p>        
         </div>
         
     </div>
 </footer>
+<div id="chat-container">
+
+    <div id="chat-icon" onclick="toggleChat()">
+        <img src="./imgs/chatbot.webp" alt="Icono de chat">
+    </div>
+   
+    <div id="chatbot" style="display: none;">
+       
+        <div id="chat-messages"></div>
+        <div class="mensaje">
+            <input type="text" class="input" id="user-input" placeholder="Escribe tu pregunta"> 
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+</div>
 
 <script src="javascript.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
