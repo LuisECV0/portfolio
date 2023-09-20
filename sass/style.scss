@@ -3,7 +3,6 @@ $color-texto: #ddd;
 $color-destacado: teal;
 * {
   margin: 0;
-  color: $color-texto;
 }
   .cabecera {
     background: $color-fondo;
@@ -74,10 +73,12 @@ $color-destacado: teal;
         padding: 7px 0;
         margin-top: 10px;
         width: 30vh;
+        font-weight: 600;
         scale: 1;
         transition: .5s;
         background-color: #252B48;
         border-radius: 10px;
+        color: #b6c8f0;
       }
       a:active {
         border: 1px solid black;
@@ -132,6 +133,7 @@ $color-destacado: teal;
             border: 1px solid #242e44;
             background-color: #242e44;
             font-weight: 800;
+            color: #ccc;
           }
           .image-container {
             position: relative;
@@ -164,6 +166,7 @@ $color-destacado: teal;
                   font-size: 20px;
                   scale: 1;
                   transition: .5s;
+                  color: #ccc;
                 }
                 i:hover{
                   scale: 1.1;
@@ -231,6 +234,7 @@ $color-destacado: teal;
     font-size: 24px;
     padding: 10px;
     margin: 0;
+    color: #b6c8f0;
   }
   .form {
     display: flex;
@@ -247,6 +251,7 @@ $color-destacado: teal;
       label {
         font-size: 18px;
         text-align: left;
+        color: #b6c8f0;
       }
       input, textarea {
         padding: 7px 10px;
@@ -258,16 +263,17 @@ $color-destacado: teal;
         overflow: hidden;
         resize: vertical;
         height: auto;
+  
       }
     }
-    a {
+    button {
       background-color: #4c5470;
       color: white;
       font-weight: 700;
       text-decoration: none;
-      padding: 10px 20px;
+      padding: 0 20px;
       border-radius: 4px;
-      font-size: 18px;
+      font-size: 15px;
       border: 1px solid white;
       transition: background-color 0.3s ease;
       transition: 0.5s;
@@ -309,15 +315,17 @@ $color-destacado: teal;
         align-items: center;
         margin: 10px;
         height: 20px;
-        
-        i {
-          margin: 5px;
-          font-size: 30px;
-          transition: 0.5s;
-          
-          a:hover & {
-            color: aqua;
-            font-size: 35px;
+        a{
+          i {
+            margin: 5px;
+            font-size: 30px;
+            transition: 0.5s;
+            color: #ccc;
+            transform: scale(1);
+
+            i:hover{
+              color: #6b737a;
+            }          
           }
         }
       }
@@ -329,99 +337,97 @@ $color-destacado: teal;
   position: fixed;
   bottom: 10px;
   left: 10px;
-  background-color: #959dba;
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+  background-color: #959dba; 
   border-radius: 20px 20px 0 0;
   border: 2px solid rgb(255, 255, 255);
-}
 
-#chat-icon {
-  background-color: #405791;
-  border-bottom: 2px solid white;
-  text-align: center;
-  cursor: pointer;
-  padding: 0;
-  transition: .5s;
-  border-radius: 20px 20px 0 0;
-  width: auto;
-  
-  img {
-    width: 10vh;
+  #chat-icon {
+    background-color: #405791;
+    border-bottom: 2px solid white;
+    text-align: center;
+    cursor: pointer;
+    padding: 0;
+    transition: .5s;
+    border-radius: 20px 20px 0 0;
+    width: auto;
+    img {
+      width: 10vh;
+    }
+  }
+  #chatbot {
+    padding: 10px;
+    background-image: linear-gradient(rgb(70, 70, 142) 30%, rgb(122, 122, 144) 100%);
+    background-size: 30% 100%;
+
+    #chat-messages {
+      height: 200px;
+      overflow-y: auto;
+      border-bottom: 1px solid #ccc;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      color: #000000;
+      overflow-y: scroll; 
+      .user-message {
+        background-color: #b6c8f0;
+        color: #000000;
+        padding: 5px 5px;
+        border-radius: 10px 10px 10px 0;
+        max-width: 70%;
+        align-self: flex-start;
+        margin: 5px;
+        word-wrap: break-word;
+      }
+      .bot-message {
+        background-color: #b6c8f0 ;
+        border-radius: 10px 10px 0 10px;
+        padding: 5px 10px;
+        color: #191d35;
+        align-self: flex-end;
+        max-width: 70%;
+        margin: 5px;
+        word-wrap: break-word;
+      }
+      #user-input {
+        width: 70%;
+        padding: 2% 5%;
+        border: 1px solid #ccc; 
+        border-radius: 10vh;
+      }
+    }
+    #chat-messages::-webkit-scrollbar {
+      width: 5px;
+    }   
+    #chat-messages::-webkit-scrollbar-track {
+      background-color: #445069;
+    }
+    #chat-messages::-webkit-scrollbar-thumb {
+      background-color: #191d35;
+      border-radius: 5px;
+    }
+    .mensaje {
+      display: flex;
+      flex-direction: row;
+      justify-content:space-around;
+
+      button {
+        padding: 5px 10px;
+        background-color: #191d35;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: .5s;
+        border-radius: 5px;
+        scale: 1;
+      }
+      button:active {
+        scale: 0.5;
+      }
+    }
   }
 }
-.mensaje {
-  display: flex;
-  flex-direction: row;
-  justify-content:space-around;
-}
-#chatbot {
-  padding: 10px;
-  background-image: linear-gradient(rgb(70, 70, 142) 30%, rgb(122, 122, 144) 100%);
-  background-size: 30% 100%;
-}
-#user-input {
-  width: 70%;
-  padding: 2% 5%;
-  border: 1px solid #ccc;
-  color: #000000;
-  border-radius: 10vh;
-}
-#chat-messages {
-  height: 200px;
-  overflow-y: auto;
-  border-bottom: 1px solid #ccc;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  overflow-y: scrollS;
-}
-#chat-messages::-webkit-scrollbar {
-  width: 5px;
-}
-
-#chat-messages::-webkit-scrollbar-track {
-  background-color: #445069;
-}
 
 
-#chat-messages::-webkit-scrollbar-thumb {
-  background-color: #191d35;
-  border-radius: 5px;
-}
-.user-message {
-  background-color: #b6c8f0;
-  color: #000000;
-  padding: 5px 5px;
-  border-radius: 10px 10px 10px 0;
-  max-width: 70%;
-  align-self: flex-start;
-  margin: 5px;
-  word-wrap: break-word;
-}
-.bot-message {
-  background-color: #b6c8f0 ;
-  border-radius: 10px 10px 0 10px;
-  padding: 5px 10px;
-  color: #191d35;
-  align-self: flex-end;
-  max-width: 70%;
-  margin: 5px;
-  word-wrap: break-word;
-}
-button {
-  padding: 5px 10px;
-  background-color: #191d35;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  transition: .5s;
-  border-radius: 5px;
-  scale: 1;
-}
-
-button:active {
-  scale: 0.5;
-}
 
 @media (max-width: 389px) {
 

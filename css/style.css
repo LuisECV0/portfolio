@@ -1,6 +1,5 @@
 * {
   margin: 0;
-  color: #ddd;
 }
 
 .cabecera {
@@ -67,10 +66,12 @@
   padding: 7px 0;
   margin-top: 10px;
   width: 30vh;
+  font-weight: 600;
   scale: 1;
   transition: 0.5s;
   background-color: #252B48;
   border-radius: 10px;
+  color: #b6c8f0;
 }
 .presentation .txt-presentation a:active {
   border: 1px solid black;
@@ -120,6 +121,7 @@
   border: 1px solid #242e44;
   background-color: #242e44;
   font-weight: 800;
+  color: #ccc;
 }
 .projects-container .margin-project .number-project .box-project .image-container {
   position: relative;
@@ -155,6 +157,7 @@
   font-size: 20px;
   scale: 1;
   transition: 0.5s;
+  color: #ccc;
 }
 .projects-container .margin-project .number-project .box-project .image-container .overlay .top-overlay i:hover {
   scale: 1.1;
@@ -213,6 +216,7 @@
   font-size: 24px;
   padding: 10px;
   margin: 0;
+  color: #b6c8f0;
 }
 .contact .form {
   display: flex;
@@ -231,6 +235,7 @@
 .contact .form .box-name label, .contact .form .box-msj label {
   font-size: 18px;
   text-align: left;
+  color: #b6c8f0;
 }
 .contact .form .box-name input, .contact .form .box-name textarea, .contact .form .box-msj input, .contact .form .box-msj textarea {
   padding: 7px 10px;
@@ -243,21 +248,21 @@
   resize: vertical;
   height: auto;
 }
-.contact .form a {
+.contact .form button {
   background-color: #4c5470;
   color: white;
   font-weight: 700;
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 0 20px;
   border-radius: 4px;
-  font-size: 18px;
+  font-size: 15px;
   border: 1px solid white;
   transition: background-color 0.3s ease;
   transition: 0.5s;
   align-self: center;
   width: fit-content;
 }
-.contact .form a:hover {
+.contact .form button:hover {
   background-color: #6b737a;
   border: 1px solid black;
   color: black;
@@ -285,14 +290,15 @@
   margin: 10px;
   height: 20px;
 }
-.content-footer .sub-box-footer .enlaces i {
+.content-footer .sub-box-footer .enlaces a i {
   margin: 5px;
   font-size: 30px;
   transition: 0.5s;
+  color: #ccc;
+  transform: scale(1);
 }
-a:hover .content-footer .sub-box-footer .enlaces i {
-  color: aqua;
-  font-size: 35px;
+.content-footer .sub-box-footer .enlaces a i i:hover {
+  color: #6b737a;
 }
 
 #chat-container {
@@ -300,12 +306,10 @@ a:hover .content-footer .sub-box-footer .enlaces i {
   bottom: 10px;
   left: 10px;
   background-color: #959dba;
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
   border-radius: 20px 20px 0 0;
   border: 2px solid rgb(255, 255, 255);
 }
-
-#chat-icon {
+#chat-container #chat-icon {
   background-color: #405791;
   border-bottom: 2px solid white;
   text-align: center;
@@ -315,54 +319,25 @@ a:hover .content-footer .sub-box-footer .enlaces i {
   border-radius: 20px 20px 0 0;
   width: auto;
 }
-#chat-icon img {
+#chat-container #chat-icon img {
   width: 10vh;
 }
-
-.mensaje {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-#chatbot {
+#chat-container #chatbot {
   padding: 10px;
   background-image: linear-gradient(rgb(70, 70, 142) 30%, rgb(122, 122, 144) 100%);
   background-size: 30% 100%;
 }
-
-#user-input {
-  width: 70%;
-  padding: 2% 5%;
-  border: 1px solid #ccc;
-  color: #000000;
-  border-radius: 10vh;
-}
-
-#chat-messages {
+#chat-container #chatbot #chat-messages {
   height: 200px;
   overflow-y: auto;
   border-bottom: 1px solid #ccc;
   display: flex;
   flex-direction: column;
   gap: 0;
-  overflow-y: scrollS;
+  color: #000000;
+  overflow-y: scroll;
 }
-
-#chat-messages::-webkit-scrollbar {
-  width: 5px;
-}
-
-#chat-messages::-webkit-scrollbar-track {
-  background-color: #445069;
-}
-
-#chat-messages::-webkit-scrollbar-thumb {
-  background-color: #191d35;
-  border-radius: 5px;
-}
-
-.user-message {
+#chat-container #chatbot #chat-messages .user-message {
   background-color: #b6c8f0;
   color: #000000;
   padding: 5px 5px;
@@ -372,8 +347,7 @@ a:hover .content-footer .sub-box-footer .enlaces i {
   margin: 5px;
   word-wrap: break-word;
 }
-
-.bot-message {
+#chat-container #chatbot #chat-messages .bot-message {
   background-color: #b6c8f0;
   border-radius: 10px 10px 0 10px;
   padding: 5px 10px;
@@ -383,8 +357,28 @@ a:hover .content-footer .sub-box-footer .enlaces i {
   margin: 5px;
   word-wrap: break-word;
 }
-
-button {
+#chat-container #chatbot #chat-messages #user-input {
+  width: 70%;
+  padding: 2% 5%;
+  border: 1px solid #ccc;
+  border-radius: 10vh;
+}
+#chat-container #chatbot #chat-messages::-webkit-scrollbar {
+  width: 5px;
+}
+#chat-container #chatbot #chat-messages::-webkit-scrollbar-track {
+  background-color: #445069;
+}
+#chat-container #chatbot #chat-messages::-webkit-scrollbar-thumb {
+  background-color: #191d35;
+  border-radius: 5px;
+}
+#chat-container #chatbot .mensaje {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#chat-container #chatbot .mensaje button {
   padding: 5px 10px;
   background-color: #191d35;
   color: #fff;
@@ -394,8 +388,7 @@ button {
   border-radius: 5px;
   scale: 1;
 }
-
-button:active {
+#chat-container #chatbot .mensaje button:active {
   scale: 0.5;
 }
 
